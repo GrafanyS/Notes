@@ -68,13 +68,13 @@ class ModelJSON(object):
 
         notes_json = json.dumps(json_strings_list, indent=4, sort_keys=False, default=str)
 
-        with open(self.filename, "w") as my_file:
+        with open(self.filename, "w", encoding='utf-8') as my_file:
             my_file.write(notes_json)
 
     def read_json(self):
         notes_list = list()
         try:
-            with open(self.filename, "r") as my_file:
+            with open(self.filename, "r", encoding='utf-8') as my_file:
                 notes_json = my_file.read()
             data = json.loads(notes_json)
             data.sort(key=lambda x: x['date'])
