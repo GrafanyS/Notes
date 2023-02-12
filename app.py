@@ -1,4 +1,5 @@
 import datetime
+from colorama import Fore, Back, Style
 
 from controller import Controller
 from modelJSON import ModelJSON
@@ -10,15 +11,16 @@ def run():
     c = Controller(ModelJSON("notes.json"), View())
 
     while True:
-        command = input(
-            '1 - создать заметку\n'
-            '2 - прочитать заметку\n'
-            '3 - обновить заметку\n'
-            '4 - удалить заметку\n'
-            '5 - удалить все заметки\n'
-            '6 - прочитать все заметки\n'
-            '7 - выход\n' +
-            'Сделайте Ваш выбор: ')
+        command = input(Fore.BLUE +
+                        '1 - создать заметку\n'
+                        '2 - прочитать заметку\n'
+                        '3 - обновить заметку\n'
+                        '4 - удалить заметку\n'
+                        '5 - удалить все заметки\n'
+                        '6 - прочитать все заметки\n'
+                        '7 - выход\n' +
+                        'Сделайте Ваш выбор: '
+                        + Style.RESET_ALL)
         if command == '7':
             break
 
@@ -56,7 +58,7 @@ def run():
                 print('\nСписок всех заметок:')
                 c.show_notes()
         else:
-            print('Команда не найдена')
+            print(Fore.RED + 'Команда не найдена' + Style.RESET_ALL)
 
 
 def get_note_data():

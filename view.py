@@ -1,35 +1,58 @@
+from colorama import Fore, Back, Style
+
+
 class View(object):
 
     @staticmethod
     def show_number_point_list(notes):
         for note in notes:
-            print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+            print(Fore.BLACK + Back.GREEN +
+                  '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+                  + Style.RESET_ALL)
             print(note)
-            print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+            print(Fore.BLACK + Back.GREEN +
+                  '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+                  + Style.RESET_ALL)
 
     @staticmethod
     def show_note(note):
-        print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+        print(Fore.BLACK + Back.GREEN +
+              '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+              + Style.RESET_ALL)
         print(note)
-        print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+        print(Fore.BLACK + Back.GREEN +
+              '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+              + Style.RESET_ALL)
 
     @staticmethod
     def show_empty_list_message():
-        print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+        print(Fore.BLACK + Back.GREEN +
+              '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+              + Style.RESET_ALL)
         print('Cписок заметок пустой!')
-        print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+        print(Fore.BLACK + Back.GREEN +
+              '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+              + Style.RESET_ALL)
 
     @staticmethod
     def display_note_id_not_exist(note_id):
-        print('**************************************************************')
+        print(Fore.BLACK + Back.GREEN +
+              '**************************************************************'
+              + Style.RESET_ALL)
         print('Заметка с id: {} не найдена!'.format(note_id))
-        print('**************************************************************')
+        print(Fore.BLACK + Back.GREEN +
+              '**************************************************************'
+              + Style.RESET_ALL)
 
     @staticmethod
     def display_note_id_exist(note_id):
-        print('**************************************************************')
+        print(Fore.BLACK + Back.GREEN +
+              '**************************************************************'
+              + Style.RESET_ALL)
         print('Заметка с id: {} уже есть!'.format(note_id))
-        print('**************************************************************')
+        print(Fore.BLACK + Back.GREEN +
+              '**************************************************************'
+              + Style.RESET_ALL)
 
     @staticmethod
     def display_note_stored():
