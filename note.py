@@ -39,5 +39,5 @@ class Note(object):
         self._date = date
 
     def __str__(self):
-        return f'\nЗаметка: {self._note_id}\nДата создания(редактирвония):' \
+        return f'\nЗаметка: {self._note_id}\nДата создания(редактирования):' \
                f' {self._date}\nЗаголовок: {self._title}\nТело: {self._text}\n '

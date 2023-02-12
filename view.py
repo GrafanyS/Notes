@@ -2,7 +2,6 @@ class View(object):
 
     @staticmethod
     def show_number_point_list(notes):
-
         for note in notes:
             print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
             print(note)
@@ -56,3 +55,7 @@ class View(object):
         print('--------------------------------------------------------------')
         print('Все заметки удалены!')
         print('--------------------------------------------------------------')
+
+
+def display_note_id_not_exist(search_id):
+    return search_id

@@ -82,5 +82,5 @@ class ModelJSON(object):
                 notes_list.append(Note(item['id'], item['date'], item['title'], item['text']))
 
             return notes_list
-        except Exception:
+        except ValueError:
             return self.notes
