@@ -59,10 +59,7 @@ class ModelJSON(object):
         self.write_json(self.notes)
 
     def write_json(self, notes):
-        # notes_list = list()
         json_strings_list = list()
-        # for item in notes:
-        #    notes_list.append(Note(item['id'], item['date'], item['title'], item['text']))
         for note in notes:
             json_strings_list.append({'id': note.note_id, 'date': note.date, 'title': note.title, 'text': note.text})
 
