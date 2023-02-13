@@ -1,4 +1,4 @@
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 
 
 class View(object):
@@ -6,78 +6,67 @@ class View(object):
     @staticmethod
     def show_number_point_list(notes):
         for note in notes:
-            print(Fore.BLACK + Back.GREEN +
-                  '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+            print(Fore.YELLOW + '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
                   + Style.RESET_ALL)
             print(note)
-            print(Fore.BLACK + Back.GREEN +
-                  '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+            print(Fore.YELLOW + '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
                   + Style.RESET_ALL)
 
     @staticmethod
     def show_note(note):
-        print(Fore.BLACK + Back.GREEN +
-              '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+        print(Fore.YELLOW + '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
               + Style.RESET_ALL)
         print(note)
-        print(Fore.BLACK + Back.GREEN +
-              '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+        print(Fore.YELLOW + '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
               + Style.RESET_ALL)
 
     @staticmethod
     def show_empty_list_message():
-        print(Fore.BLACK + Back.GREEN +
-              '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+        print(Fore.YELLOW + '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
               + Style.RESET_ALL)
         print('Cписок заметок пустой!')
-        print(Fore.BLACK + Back.GREEN +
-              '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+        print(Fore.YELLOW + '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
               + Style.RESET_ALL)
 
     @staticmethod
     def display_note_id_not_exist(note_id):
-        print(Fore.BLACK + Back.GREEN +
-              '**************************************************************'
+        print(Fore.RED + '**************************************************************'
               + Style.RESET_ALL)
         print('Заметка с id: {} не найдена!'.format(note_id))
-        print(Fore.BLACK + Back.GREEN +
-              '**************************************************************'
+        print(Fore.RED + '**************************************************************'
               + Style.RESET_ALL)
 
     @staticmethod
     def display_note_id_exist(note_id):
-        print(Fore.BLACK + Back.GREEN +
-              '**************************************************************'
-              + Style.RESET_ALL)
+        print(Fore.RED + '**************************************************************')
         print('Заметка с id: {} уже есть!'.format(note_id))
-        print(Fore.BLACK + Back.GREEN +
-              '**************************************************************'
+        print('**************************************************************'
               + Style.RESET_ALL)
 
     @staticmethod
     def display_note_stored():
-        print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
-        print('Заметка успешно добавлена!')
-        print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+        print(Fore.YELLOW + '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++' + Style.RESET_ALL)
+        print(Fore.GREEN + 'Заметка успешно добавлена!' + Style.RESET_ALL)
+        print(Fore.YELLOW + '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++' + Style.RESET_ALL)
 
     @staticmethod
     def display_note_updated(note_id):
-        print('---   ---   ---   ---   ---   ---   ---   ---   ---   ---   --')
-        print('Заметка с id:{} обновлена успешно!'
-              .format(note_id))
-        print('---   ---   ---   ---   ---   ---   ---   ---   ---   ---   --')
+        print(Fore.YELLOW + '---   ---   ---   ---   ---   ---   ---   ---   ---   ---   --' + Style.RESET_ALL)
+        print(Fore.GREEN + 'Заметка с id:{} обновлена успешно!'
+              .format(note_id) + Style.RESET_ALL)
+        print(Fore.YELLOW + '---   ---   ---   ---   ---   ---   ---   ---   ---   ---   --' + Style.RESET_ALL)
 
     @staticmethod
     def display_note_deletion(note_id):
         print('--------------------------------------------------------------')
-        print('Удаление заметки с id: {} выполнено!'.format(note_id))
+        print(Fore.LIGHTRED_EX + 'Удаление заметки с id: {} выполнено!'.format(note_id) + Style.RESET_ALL)
         print('--------------------------------------------------------------')
 
     @staticmethod
     def display_all_notes_deletion():
-        print('--------------------------------------------------------------')
+        print(Fore.RED + '--------------------------------------------------------------')
         print('Все заметки удалены!')
-        print('--------------------------------------------------------------')
+        print('--------------------------------------------------------------' + Style.RESET_ALL)
 
 
 def display_note_id_not_exist(search_id):
